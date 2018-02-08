@@ -147,6 +147,9 @@ a [class*=" fw-icon-"] {
 .pull-left {
   float: left;
 }
+
+
+
 [class^="fw-icon-"].pull-left,
 [class*=" fw-icon-"].pull-left {
   margin-right: .3em;
