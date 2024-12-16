@@ -26,7 +26,6 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1200,13 +1199,18 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; 
   width: 100%;
   background: #fff;
 }
 .contact .info i {
   font-size: 20px;
   color: #0563bb;
-  float: left;
+  float: none;
+  margin-right: 15px;
   width: 44px;
   height: 44px;
   background: #eef7ff;
@@ -1217,20 +1221,24 @@ section {
   transition: all 0.3s ease-in-out;
 }
 .contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
   color: #45505b;
 }
 .contact .info p {
-  padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
   color: #728394;
 }
+.contact .info h4,
+.contact .info p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
 .contact .info .email, .contact .info .phone {
-  margin-top: 40px;
+  margin-top: 0px;
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
   background: #0563bb;
