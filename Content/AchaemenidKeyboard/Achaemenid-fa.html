@@ -6,43 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>کیبورد هخامنشی | پارسی باستان</title>
     <link href="../css/achaemenidkeyboard.css" rel="stylesheet">
-
 </head>
-
 <body>
-
     <div class="container">
 
         <section class="hero">
-
             <div class="cuneiform">
                 𐎠𐎭𐎶
             </div>
-
             <h1>
                 کیبورد هخامنشی
             </h1>
-
             <p class="author">
                 ساخته شده توسط <strong><a href="https://omidsotooni.github.io/" target="_blank">امید ستونی</a></strong>
             </p>
-
             <p>
                 یک صفحه‌کلید مبتنی بر یونیکد برای تایپ
                 نویسه‌های خط میخی پارسی باستان در دستگاه‌های امروزی.
             </p>
-
             <div class="buttons">
                 <a href="https://github.com/omidsotooni/AchaemenidKeyboard" target="_blank">
                     مخزن گیت‌هاب پروژه
                 </a>
             </div>
-
             <div class="language-switch">
                 <a href="Achaemenid.html">
                     🇬🇧 English
@@ -50,224 +39,161 @@
             </div>
         </section>
 
-
         <section class="card">
-
             <h2>
                 درباره پروژه
             </h2>
-
             <p>
                 کیبورد هخامنشی یک پروژه برای فراهم کردن امکان
                 ورود دیجیتال خط میخی پارسی باستان در محیط‌های مدرن است.
             </p>
-
             <p>
                 خط میخی پارسی باستان در دوره هخامنشیان
                 (حدود ۵۵۰ تا ۳۳۰ پیش از میلاد)
                 برای کتیبه‌های سلطنتی، فرمان‌ها و نوشته‌های رسمی استفاده می‌شد.
             </p>
-
             <p>
                 این پروژه با استفاده از استاندارد رسمی Unicode،
                 صفحه‌کلیدهایی برای سیستم‌عامل‌های مختلف تولید می‌کند
                 و نگاشت کلیدها را در تمام پلتفرم‌ها یکسان نگه می‌دارد.
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>
                 ویژگی‌ها
             </h2>
-
             <ul>
-
                 <li>
                     پشتیبانی کامل از Unicode
                 </li>
-
                 <li>
                     استفاده از نویسه‌های رسمی خط میخی پارسی باستان
                 </li>
-
                 <li>
                     پشتیبانی از ۳۶ نشانه پارسی باستان
                 </li>
-
                 <li>
                     پشتیبانی از ۵ عدد پارسی باستان
                 </li>
-
                 <li>
                     پشتیبانی از جداکننده واژه‌ها
                 </li>
-
                 <li>
                     تولید صفحه‌کلید برای چندین سیستم‌عامل
                 </li>
-
             </ul>
-
         </section>
 
-
         <section class="card">
-
             <h2>
                 پشتیبانی Unicode
             </h2>
-
             <p>
                 این صفحه‌کلید از بلوک رسمی Unicode برای خط میخی پارسی باستان استفاده می‌کند:
             </p>
-
             <code>
                 U+103A0 – U+103DF
             </code>
-
             <p>
                 تمامی نویسه‌ها از کدهای رسمی Unicode استفاده می‌کنند
                 و هیچ نویسه‌ای از محدوده Private Use Area (PUA) در پروژه وجود ندارد.
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>
                 آزمایش آنلاین کیبورد
             </h2>
-
             <p>
                 با صفحه‌کلید خود شروع به تایپ کنید:
             </p>
-
             <textarea id="editor" placeholder="اینجا تایپ کنید..."></textarea>
-
+             <div class="keyboard-controls">
+                <button id="shiftBtn">Shift</button>
+                <button id="ctrlBtn">Ctrl</button>
+            </div>
+            <div id="keyboard"></div>
         </section>
 
-
         <section class="card">
-
             <h2>
                 نمونه نگاشت کلیدها
             </h2>
-
-            <p class="mapping-fa">
-
-                آ ← 𐎠
-
+             <p class="mapping">
+                A → 𐎠
                 <br>
-
-                ای ← 𐎡
-
+                I → 𐎡
                 <br>
-
-                او ← 𐎢
-
+                U → 𐎢
                 <br>
-
-                ب ← 𐎲
-
+                B → 𐎲
                 <br>
-
-                چ ← 𐎨
-
+                C → 𐎨
                 <br>
-
-                د ← 𐎭
-
+                D → 𐎭
                 <br>
-
-                م ← 𐎶
-
+                M → 𐎶
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>
                 سیستم‌عامل‌های پشتیبانی‌شده
             </h2>
-
             <ul>
-
                 <li>
                     ویندوز
                 </li>
-
                 <li>
                     لینوکس
                 </li>
-
                 <li>
                     مک
                 </li>
-
                 <li>
                     اندروید
                 </li>
-
                 <li>
                     آی او اس
                 </li>
-
                 <li>
                     وب
                 </li>
-
             </ul>
-
         </section>
 
-
         <section class="card">
-
             <h2>
                 فناوری‌های استفاده‌شده
             </h2>
-
             <ul>
-
                 <li>
                     .NET 10
                 </li>
-
                 <li>
                     استاندارد Unicode
                 </li>
-
                 <li>
                     Microsoft Keyboard Layout Creator
                 </li>
-
                 <li>
                     صفحه‌کلید تحت وب
                 </li>
-
             </ul>
-
         </section>
-
 
     </div>
 
-
-    <script src="../js/achaemenidkeyboard.js"></script>
-
+    <script src="../js/keboard.js"></script>
+    
     <script>
-
         const editor = document.getElementById("editor");
-
-
+        // Desktop physical keyboard
         document.addEventListener("keydown", e => {
-
+            // Ignore browser IME composition
+            if (e.isComposing)
+                return;
             const char = getACHPCharacter(
                 e.code,
                 {
@@ -275,32 +201,19 @@
                     ctrl: e.ctrlKey
                 }
             );
-
-
             if (char) {
                 e.preventDefault();
-
-
-                const start = editor.selectionStart;
-                const end = editor.selectionEnd;
-
-
-                editor.value =
-                    editor.value.substring(0, start) +
-                    char +
-                    editor.value.substring(end);
-
-
-                editor.selectionStart =
-                    editor.selectionEnd =
-                    start + char.length;
+                insertCharacter(editor, char);
             }
-
         });
-
+        editor.addEventListener("compositionstart", e => {
+            e.preventDefault();
+        });
+        // Virtual mobile keyboard
+        buildKeyboard("keyboard", "editor");
+        // Enable Shift / Ctrl buttons
+        enableAchaemenidModifiers();
     </script>
 
-
 </body>
-
 </html>

@@ -53,10 +53,20 @@ Bi-level Optimization with Approximation and Bayesian Optimization
 
 - 🏗️ Software engineering projects (Clean Architecture, scalable systems)
 - ⛓️ Blockchain development (Smart Contracts, DApps)
+- 𐎠 Achaemenid Keyboard: Unicode-based Old Persian Cuneiform keyboard supporting modern digital input across multiple platforms  
+  Repository: https://github.com/omidsotooni/AchaemenidKeyboard
 - 🌐 Freelance web development & SEO optimization
 - 🛒 Real-world system: Online Shop => https://talayeshahrivar.ir/
 
 ---
+
+## 🏛️ Open Source & Digital Heritage
+
+- 𐎠 Achaemenid Keyboard  
+  A Unicode-based keyboard layout project for Old Persian Cuneiform, enabling digital input of Achaemenid inscriptions on modern platforms.
+
+  Repository:
+  https://github.com/omidsotooni/AchaemenidKeyboard
 
 ## 🧾 Summary
 
@@ -149,11 +159,13 @@ Template usage is free.
 - 💻 توسعه نرم‌افزار (.NET، سیستم‌های فول‌استک)
 - ⛓️ توسعه بلاکچین (قراردادهای هوشمند، DApp)
 - 🤖 یادگیری ماشین و علوم داده
-- 🌐 توسعه فریلنس و بهینه‌سازی SEO
+- 𐎠 کیبورد هخامنشی: صفحه‌کلید مبتنی بر Unicode برای تایپ خط میخی پارسی باستان در سیستم‌عامل‌های مختلف  
+  مخزن پروژه: https://github.com/omidsotooni/AchaemenidKeyboard
+- 🌐 پروژه‌های فریلنس و SEO
 - 🏗️ سیستم‌های واقعی و عملیاتی
 
 ---
-
+  
 ## 👨‍💻 درباره من
 
 من **امید ستونی** هستم، مهندس نرم‌افزار و دارای **کارشناسی ارشد علوم کامپیوتر (تصمیم‌گیری و دانش)**.
@@ -190,6 +202,12 @@ Template usage is free.
 - 🛒 سیستم واقعی: فروشگاه آنلاین  https://talayeshahrivar.ir/
 
 ---
+
+## 🏛️ متن‌باز و میراث دیجیتال
+
+- کیبورد هخامنشی 𐎠  
+  پروژه‌ای مبتنی بر Unicode برای ایجاد امکان تایپ خط میخی پارسی باستان در محیط‌های دیجیتال و سیستم‌عامل‌های مدرن. مخزن:
+  https://github.com/omidsotooni/AchaemenidKeyboard
 
 ## 🧾 خلاصه
 
