@@ -4,22 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Achaemenid Keyboard | Old Persian Cuneiform</title>
     <link href="../css/achaemenidkeyboard.css" rel="stylesheet">
-
 </head>
 
 <body>
-
     <div class="container">
 
         <section class="hero">
-
             <div class="cuneiform">
                 𐎠𐎭𐎶
             </div>
-
             <h1>
                 Achaemenid Keyboard
             </h1>
@@ -30,13 +25,11 @@
                 A Unicode keyboard layout for typing
                 Old Persian Cuneiform characters on modern devices.
             </p>
-
             <div class="buttons">
                 <a href="https://github.com/omidsotooni/AchaemenidKeyboard" target="_blank">
                     GitHub Repository
                 </a>
             </div>
-
             <div class="language-switch">
                 <a href="Achaemenid-fa.html">
                     🇮🇷 فارسی
@@ -44,30 +37,22 @@
             </div>
         </section>
 
-
         <section class="card">
-
             <h2>About Project</h2>
-
             <p>
                 Achaemenid Keyboard provides modern digital input support
                 for the Old Persian Cuneiform writing system used during
                 the Achaemenid Empire (c. 550–330 BCE).
             </p>
-
             <p>
                 The project generates Unicode-based keyboard layouts for
                 multiple operating systems while preserving the same
                 keyboard mapping.
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>Features</h2>
-
             <ul>
                 <li>Fully Unicode compliant</li>
                 <li>Official Old Persian Unicode support</li>
@@ -76,47 +61,35 @@
                 <li>Word divider support</li>
                 <li>Cross-platform keyboard generation</li>
             </ul>
-
         </section>
 
-
         <section class="card">
-
             <h2>Unicode Support</h2>
-
             <p>
                 The keyboard uses the official Old Persian Unicode block:
             </p>
-
             <code>
                 U+103A0 – U+103DF
             </code>
-
             <p>
                 No Private Use Area (PUA) characters are used.
                 All characters are represented using official Unicode code points.
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>Interactive Web Keyboard Demo</h2>
-
-            <p>
-                Type using your keyboard:
-            </p>
-
+            <p>Type using your keyboard:</p>
             <textarea id="editor" placeholder="Start typing..."></textarea>
-
+            <div class="keyboard-controls">
+                <button id="shiftBtn">Shift</button>
+                <button id="ctrlBtn">Ctrl</button>
+            </div>
+            <div id="keyboard"></div>
         </section>
 
-
         <section class="card">
-
             <h2>Keyboard Examples</h2>
-
             <p class="mapping">
                 A → 𐎠
                 <br>
@@ -132,14 +105,10 @@
                 <br>
                 M → 𐎶
             </p>
-
         </section>
 
-
         <section class="card">
-
             <h2>Supported Platforms</h2>
-
             <ul>
                 <li>Windows</li>
                 <li>Linux</li>
@@ -148,35 +117,29 @@
                 <li>iOS</li>
                 <li>Web</li>
             </ul>
-
         </section>
 
-
         <section class="card">
-
             <h2>Technology</h2>
-
             <ul>
                 <li>.NET 10</li>
                 <li>Unicode Standard</li>
                 <li>Microsoft Keyboard Layout Creator</li>
                 <li>Web Keyboard Engine</li>
             </ul>
-
         </section>
-
 
     </div>
 
-
-    <script src="../js/achaemenidkeyboard.js"></script>
+    <script src="../js/keboard.js"></script>
 
     <script>
-
         const editor = document.getElementById("editor");
-
+        // Desktop physical keyboard
         document.addEventListener("keydown", e => {
-
+            // Ignore browser IME composition
+            if (e.isComposing)
+                return;
             const char = getACHPCharacter(
                 e.code,
                 {
@@ -184,27 +147,19 @@
                     ctrl: e.ctrlKey
                 }
             );
-
             if (char) {
                 e.preventDefault();
-
-                const start = editor.selectionStart;
-                const end = editor.selectionEnd;
-
-                editor.value =
-                    editor.value.substring(0, start) +
-                    char +
-                    editor.value.substring(end);
-
-                editor.selectionStart =
-                    editor.selectionEnd =
-                    start + char.length;
+                insertCharacter(editor, char);
             }
-
         });
-
+        editor.addEventListener("compositionstart", e => {
+            e.preventDefault();
+        });
+        // Virtual mobile keyboard
+        buildKeyboard("keyboard", "editor");
+        // Enable Shift / Ctrl buttons
+        enableAchaemenidModifiers();
     </script>
-
 
 </body>
 

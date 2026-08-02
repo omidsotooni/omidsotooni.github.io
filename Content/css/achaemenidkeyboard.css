@@ -1,7 +1,6 @@
 html[lang="fa"] body {
     font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
 }
-
 html[lang="en"] body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -9,7 +8,6 @@ html[lang="fa"] h1,
 html[lang="fa"] h2 {
     font-weight: 700;
 }
-
 body {
     line-height: 1.9;
     margin: 0;
@@ -17,27 +15,26 @@ body {
     background: #0b1220;
     color: #f5f5f5;
 }
-
+html,
+body {
+    overflow-x: hidden;
+}
 .container {
     max-width: 1000px;
     margin: auto;
 }
-
 h1,
 h2 {
     color: #ffd166;
 }
-
 .hero {
     text-align: center;
     padding: 40px 0;
 }
-
 .cuneiform {
     font-size: 48px;
     margin: 20px 0;
 }
-
 .buttons a {
     display: inline-block;
     margin: 10px;
@@ -47,14 +44,12 @@ h2 {
     color: #000;
     background: #ffd166;
 }
-
 .card {
     background: #151f33;
     padding: 25px;
     border-radius: 12px;
     margin: 25px 0;
 }
-
 textarea {
     width: 98%;
     height: 180px;
@@ -66,17 +61,14 @@ textarea {
     direction: ltr;
     font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
 }
-
 code {
     background: #000;
     padding: 5px 10px;
     border-radius: 5px;
 }
-
 ul {
     padding-left: 20px;
 }
-
 .mapping {
     font-size: 24px;
     letter-spacing: 5px;
@@ -89,14 +81,12 @@ ul {
     direction: rtl;
     text-align: right;
 }
-
 .author {
     margin-top: 15px;
     font-size: 18px;
     font-weight: 400;
     opacity: 0.85;
 }
-
 .author strong {
     color: #ffd166;
     font-weight: 700;
@@ -105,14 +95,12 @@ ul {
     color: #ffd166;
     text-decoration: none;
 }
-
 .author a:hover {
     text-decoration: underline;
 }
 .language-switch {
     margin-top: 20px;
 }
-
 .language-switch a {
     display: inline-block;
     padding: 8px 18px;
@@ -123,8 +111,71 @@ ul {
     transition: all .3s ease;
     font-size: 15px;
 }
-
 .language-switch a:hover {
     background: #ffd166;
     color: #000;
+}
+
+/* Virtual Keyboard */
+#keyboard {
+    width: 100%;
+    margin-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.keyboard-key {
+    flex: 1;
+    min-width: 0;              /* IMPORTANT */
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #ffd166;
+    color: #000;
+    font-size: clamp(14px, 3vw, 22px);
+    cursor: pointer;
+    touch-action: manipulation;
+    box-sizing: border-box;
+}
+
+.space-key {
+    flex: 6;
+}
+
+.separator-key {
+    flex: 1.3;
+}
+/* Mobile Android style */
+@media (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .keyboard-row {
+        gap: 2px;
+    }
+
+    .keyboard-key {
+        height: 40px;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .space-key {
+        flex: 5;
+    }
 }
